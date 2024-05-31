@@ -45,31 +45,32 @@ session_start();
 
                             if ((!($barangay == "NONE")) && (!($category == "NONE")) && (!($keyword == ""))) {
                                 $query = "SELECT * FROM Profiles WHERE Barangay='$barangay' OR Category='$category' OR Bsns_Name LIKE '%$category%' 
-                                OR Description LIKE '%$category%' OR Description LIKE '%$keyword%' OR Bsns_Name LIKE '%$keyword%'";
+                                OR Description LIKE '%$category%' OR Description LIKE '%$keyword%' OR Bsns_Name LIKE '%$keyword%' ORDER BY Bsns_Name";
                             } 
                             else if (($barangay == "NONE") && (!($category == "NONE")) && (!($keyword == ""))) {
                                 $query = "SELECT * FROM Profiles WHERE Category='$category' OR Bsns_Name LIKE '%$category%' 
-                                OR Description LIKE '%$category%' OR Description LIKE '%$keyword%' OR Bsns_Name LIKE '%$keyword%'";
+                                OR Description LIKE '%$category%' OR Description LIKE '%$keyword%' OR Bsns_Name LIKE '%$keyword%' ORDER BY Bsns_Name";
                             } 
                             else if ((!($barangay == "NONE")) && ($category == "NONE") && (!($keyword == ""))) {
                                 $query = "SELECT * FROM Profiles WHERE Barangay='$barangay' OR 
-                                Description LIKE '%$keyword%' OR Bsns_Name LIKE '%$keyword%'";
+                                Description LIKE '%$keyword%' OR Bsns_Name LIKE '%$keyword%' ORDER BY Bsns_Name";
                             } 
                             else if ((!($barangay == "NONE")) && (!($category == "NONE")) && ($keyword == "")) {
                                 $query = "SELECT * FROM Profiles WHERE Barangay='$barangay' OR Category='$category' OR Bsns_Name LIKE '%$category%' 
-                                OR Description LIKE '%$category%'";
+                                OR Description LIKE '%$category%' ORDER BY Bsns_Name";
                             } 
                             else if (($barangay == "NONE") && ($category == "NONE") && (!($keyword == ""))) {
-                                $query = "SELECT * FROM Profiles WHERE Description LIKE '%$keyword%' OR Bsns_Name LIKE '%$keyword%'";
+                                $query = "SELECT * FROM Profiles WHERE Description LIKE '%$keyword%' OR Bsns_Name LIKE '%$keyword%' ORDER BY Bsns_Name";
                             } 
                             else if (($barangay == "NONE") && (!($category == "NONE")) && ($keyword == "")) {
-                                $query = "SELECT * FROM Profiles WHERE Category='$category' OR Bsns_Name LIKE '%$category%' OR Description LIKE '%$category%'";
+                                $query = "SELECT * FROM Profiles WHERE Category='$category' OR Bsns_Name LIKE '%$category%' 
+                                OR Description LIKE '%$category%' ORDER BY Bsns_Name";
                             } 
                             else if ((!($barangay == "NONE")) && ($category == "NONE") && ($keyword == "")) {
-                                $query = "SELECT * FROM Profiles WHERE Barangay='$barangay'";
+                                $query = "SELECT * FROM Profiles WHERE Barangay='$barangay' ORDER BY Bsns_Name";
                             }
                             else {
-                                $query = "SELECT * FROM Profiles";
+                                $query = "SELECT * FROM Profiles ORDER BY Bsns_Name";
                             }
 
                             $result = $conn->query($query);
