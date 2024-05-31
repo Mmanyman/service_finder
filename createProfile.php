@@ -135,101 +135,104 @@ $conn->close();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/editProfile.css" />
+    <link rel="stylesheet" href="css/editProfile_ext.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <title>Create Profile</title>
   </head>
   <body>
+      <div class="wrapper">
       <h1>CREATE PROFILE</h1>
-      <div class="about">
-        <h3>About your service</h3>
-        <form action="" method="post" enctype="multipart/form-data">
-        <div class="aboutServiceWrapper">
-          <input type="text" placeholder="Enter name" name="name" required/>
-          <input type="text" placeholder="Enter service hours" name="hours" required/>
-          <textarea class="description" placeholder="Enter business description" name="description"></textarea>
-          <select name="category">
-            <option value="Laundry">Laundry</option>
-            <option value="Tech">Tech</option>
-            <option value="Transportation">Transportation</option>
-            <option value="Printing Services">Printing Services</option>
-            <option value="Salon and Hair Care">Salon and Hair Care</option>
-            <option value="Food and Catering">Food and Catering</option>
-            <option value="Healthcare">Healthcare</option>
-            <option value="Cleaning Services">Cleaning Services</option>
-            <option value="Fitness">Fitness</option>
-            <option value="Delivery">Delivery</option>
-            <option value="Home Repair">Home Repair</option>
-            <option value="Automotive">Automotive</option>
-            <option value="Cafe and Study Spaces">Cafes and Study Spaces</option>
-            <option value="Others">Others</option>
-          </select>
-          <input type="text" placeholder="Enter pricing" name="price" required/>
-        </div>
-      </div>
-      <br><br>
-      <div class="upload">
-        <div class="profile">
-          <h3>Profile Picture</h3>
-          <input type="file" id="profile" name="profile"><br /><br />
-        </div>
-        <div class="showcase">
-          <h3>Showcase 1</h3>
-          <input type="file" id="file1" name="file1"><br /><br />
-        </div>
-        <div class="showcase">
-          <h3>Showcase 2</h3>
-          <input type="file" id="file2" name="file2"><br /><br />
-        </div>
-        <div class="showcase">
-          <h3>Showcase 3</h3>
-          <input type="file" id="file3" name="file3"><br /><br />
-        </div>
-      </div>
-      <div class="otherInfo">
-        <div class="address">
-          <h4>Address</h4>
-          <select name="barangay">
-            <option value="Bacauan">Bacauan</option>
-            <option value="Bagumbayan">Bagumbayan</option>
-            <option value="Baraclayan">Baraclayan</option>
-            <option value="Baybay Norte">Baybay Norte</option>
-            <option value="Baybay Sur">Baybay Sur</option>
-            <option value="Bolho">Bolho</option>
-            <option value="Cabalaunan">Cabalaunan</option>
-            <option value="Cagbang">Cagbang</option>
-            <option value="Calagtangan">Calagtangan</option>
-            <option value="Dalije">Dalije</option>
-            <option value="Guibongan">Guibongan</option>
-            <option value="Igbita">Igbita</option>
-            <option value="Igdalaquit">Igdalaquit</option>
-            <option value="Igdulaca">Igdulaca</option>
-            <option value="Igpandan">Igpandan</option>
-            <option value="Igtuba">Igtuba</option>
-            <option value="Ilog-Ilog">Ilog-Ilog</option>
-            <option value="Kirayan Norte">Kirayan Norte</option>
-            <option value="Kirayan Sur">Kirayan Sur</option>
-            <option value="Lanutan">Lanutan</option>
-            <option value="Mat-y">Mat-y</option>
-            <option value="Sapa">Sapa</option>
-            <option value="Tacas">Tacas</option>
-            <option value="Tumagboc">Tumagboc</option>
-            <option value="Ubos Ilawod">Ubos Ilawod</option>
-            <option value="Ubos Ilaya">Ubos Ilaya</option>
-          </select>
-          <input type="text" placeholder="Enter street" name="street" required/>
-          <input type="text" placeholder="Enter landmark" name="landmark" required/>
-        </div>
-        <div class="contact">
-          <h4>Contact Information</h4>
-          <input type="text" placeholder="Enter contact person" name="cperson" required/>
-          <input type="email" placeholder="Enter contact email" name="cemail" required/>
-          <input type="text" placeholder="Enter contact phone number" name="cnumber" required/>
-        </div>
-      </div>
-      <button type="submit" class="submit" name="submit">SUBMIT</button>
-    </form>
-    </main>
+          <main>
+          <h4>About your service</h4>
+            <form action="" method="post" enctype="multipart/form-data">
+            <div class="aboutServiceWrapper">
+              <input type="text" placeholder="     Enter name" name="name" required/>
+              <input type="text" placeholder="     Enter service hours" name="hours" required/>
+              <textarea class="description" placeholder="     Enter business description" name="description"></textarea>
+              <select name="category">
+                <option value="Laundry">Laundry</option>
+                <option value="Tech">Tech</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Printing Services">Printing Services</option>
+                <option value="Salon and Hair Care">Salon and Hair Care</option>
+                <option value="Food and Catering">Food and Catering</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Cleaning Services">Cleaning Services</option>
+                <option value="Fitness">Fitness</option>
+                <option value="Delivery">Delivery</option>
+                <option value="Home Repair">Home Repair</option>
+                <option value="Automotive">Automotive</option>
+                <option value="Cafe and Study Spaces">Cafes and Study Spaces</option>
+                <option value="Others">Others</option>
+              </select>
+              <input type="text" placeholder="     Enter pricing" name="price" required/>
+            </div>
+          </div>
+          <br><br>
+          <div class="upload">
+            <div class="profile">
+              <h3>Profile Picture</h3>
+              <input type="file" id="profile" name="profile"><br /><br />
+            </div>
+            <div class="showcase">
+              <h3>Showcase 1</h3>
+              <input type="file" id="file1" name="file1"><br /><br />
+            </div>
+            <div class="showcase">
+              <h3>Showcase 2</h3>
+              <input type="file" id="file2" name="file2"><br /><br />
+            </div>
+            <div class="showcase">
+              <h3>Showcase 3</h3>
+              <input type="file" id="file3" name="file3"><br /><br />
+            </div>
+          </div>
+          <div class="otherInfo">
+            <div class="address">
+              <h4>Address</h4>
+              <select name="barangay">
+                <option value="Bacauan">Bacauan</option>
+                <option value="Bagumbayan">Bagumbayan</option>
+                <option value="Baraclayan">Baraclayan</option>
+                <option value="Baybay Norte">Baybay Norte</option>
+                <option value="Baybay Sur">Baybay Sur</option>
+                <option value="Bolho">Bolho</option>
+                <option value="Cabalaunan">Cabalaunan</option>
+                <option value="Cagbang">Cagbang</option>
+                <option value="Calagtangan">Calagtangan</option>
+                <option value="Dalije">Dalije</option>
+                <option value="Guibongan">Guibongan</option>
+                <option value="Igbita">Igbita</option>
+                <option value="Igdalaquit">Igdalaquit</option>
+                <option value="Igdulaca">Igdulaca</option>
+                <option value="Igpandan">Igpandan</option>
+                <option value="Igtuba">Igtuba</option>
+                <option value="Ilog-Ilog">Ilog-Ilog</option>
+                <option value="Kirayan Norte">Kirayan Norte</option>
+                <option value="Kirayan Sur">Kirayan Sur</option>
+                <option value="Lanutan">Lanutan</option>
+                <option value="Mat-y">Mat-y</option>
+                <option value="Sapa">Sapa</option>
+                <option value="Tacas">Tacas</option>
+                <option value="Tumagboc">Tumagboc</option>
+                <option value="Ubos Ilawod">Ubos Ilawod</option>
+                <option value="Ubos Ilaya">Ubos Ilaya</option>
+              </select>
+              <input type="text" placeholder="     Enter street" name="street" required/>
+              <input type="text" placeholder="     Enter landmark" name="landmark" required/>
+            </div>
+            <div class="contact">
+              <h4>Contact Information</h4>
+              <input type="text" placeholder="      Enter contact person" name="cperson" required/>
+              <input type="email" placeholder="     Enter contact email" name="cemail" required/>
+              <input type="text" placeholder="      Enter contact phone number" name="cnumber" required/>
+            </div>
+          </div>
+          <button type="submit" class="submit" name="submit">SUBMIT</button>
+        </form>
+      </main>
+    </div>
     <footer>
             <div class="icons">
                 <p> <i class="fa-solid fa-envelope"></i> CONTACT US </p>
