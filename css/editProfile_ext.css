@@ -1,0 +1,24 @@
+body{
+    text-align: center;
+}
+
+.wrapper{
+    padding:20px;
+}
+
+.upload{
+    justify-content: center;
+}
+.backWrap{
+    padding-right: 20px;
+    display: flex;
+    justify-content: end;
+}
+h4{
+    margin: 3px;
+    background-color:  #2C7373;
+    height: 30px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+}
