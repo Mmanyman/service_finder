@@ -26,6 +26,7 @@ if ($conn->query("SELECT * FROM Showcase WHERE Profile_ID='$prof_id' AND Count =
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service Finder</title>
     <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/userProfile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="index.js" defer></script>
 </head>
@@ -53,25 +54,73 @@ if ($conn->query("SELECT * FROM Showcase WHERE Profile_ID='$prof_id' AND Count =
         </div>
     </header>
     <main>
-        <div class="details">
+    <div class="details">
             <div>
                 <?php
                     if ($details["Logo"]){
-                        echo "<img src='" . $details["Logo"] . "' height='100px'>"; 
+                        echo '
+                            <div class=\'detailsWrapper\'>  
+                                <img class=\'busLogo\' src="' . $details["Logo"] . '">
+                                
+                                <div>
+                                    <h1 class=\'busName\'>' . $details["Bsns_Name"] . '</h1>
+                                    <div class=\'infoWrapper\'>
+                                        <div class=\'info\'>
+                                            <h5>' . $details["Category"] . '</h5>
+                                            <h5> Street:     ' . $details["Address"] . '</h5>
+                                            <h5>Landmark:     ' . $details["Landmark"] . '</h5>
+                                        </div>
+                                        <div class=\'info\'>
+                                            <h5> Contact Person:     ' . $details["C_Person"] . '</h5>
+                                            <h5> Email:     ' . $details["C_Email"] . '</h5>
+                                            <h5> Contact Number:     ' . $details["C_Num"] . '</h5>
+                                        </div>
+                                        <div class=\'info\'>
+                                            <h5>Opening Hours:     ' . $details["Hours_Open"] . '</h5>
+                                            <h5>Price:     ' . $details["Price"] . '</h5>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        ';
+                    
+                    }else{//no logo uploaded
+                        echo '
+                        <div class=\'detailsWrapper\'>        
+                        <div class=\'details\'>
+                            <h1 class=\'busName\'>' . $details["Bsns_Name"] . '</h1>
+                            <div class=\'infoWrapper\'>
+                                <div class=\'info\'>
+                                    <h5>' . $details["Category"] . '</h5>
+                                    <h5> Street:     ' . $details["Address"] . '</h5>
+                                    <h5>Landmark:     ' . $details["Landmark"] . '</h5>
+                                </div>
+                                <div class=\'info\'>
+                                    <h5> Contact Person:     ' . $details["C_Person"] . '</h5>
+                                    <h5> Email:     ' . $details["C_Email"] . '</h5>
+                                    <h5> Contact Number:     ' . $details["C_Num"] . '</h5>
+                                </div>
+                                <div class=\'info\'>
+                                    <h5>Opening Hours:     ' . $details["Hours_Open"] . '</h5>
+                                    <h5>Price:     ' . $details["Price"] . '</h5>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                        
+                    ';
+                    
                     }
-                    echo 
-                         "<br>Name: " . $details["Bsns_Name"] .
-                         "<br>Category: " . $details["Category"] . 
-                         "<br>Address: " . $details["Address"] . " | " . $details["Barangay"] .
-                         "<br>Landmark: " . $details["Landmark"] .
-                         "<br>Contact Person: " . $details["C_Person"] . 
-                         "<br>Contact Email: " . $details["C_Email"] . 
-                         "<br>Contact Number: " . $details["C_Num"] . 
-                         "<br>Business Hours: " . $details["Hours_Open"] .
-                         "<br>Pricing: " . $details["Price"];
+
                 ?>
             </div>
+        </div >
+        <div class="editWrap">
+            <a href="editProfile.php"><button class="button" id="account" type="submit">EDIT PROFILE</button></a>
         </div>
+          
         <div class="description">
             <?php 
                 echo "Description: " . $details["Description"];
@@ -82,31 +131,22 @@ if ($conn->query("SELECT * FROM Showcase WHERE Profile_ID='$prof_id' AND Count =
                 if ($showcase1 == NULL) {
                     echo "";
                 } else {
-                    echo "<img src='" . $showcase1 . "' height='100px'>";
+                    echo "<img src='" . $showcase1 . "' width='200px' height='200px' style='margin:30px;'>";
                 }
                 if ($showcase2 == NULL) {
                     echo "";
                 } else {
-                    echo "<img src='" . $showcase2 . "' height='100px'>";
+                    echo "<img src='" . $showcase2 . "' width='200px' height='200px' style='margin:30px;'>";
                 }
                 if ($showcase3 == NULL) {
                     echo "";
                 } else {
-                    echo "<img src='" . $showcase3 . "' height='100px'>";
+                    echo "<img src='" . $showcase3 . "' width='200px' height='200px' style='margin:30px;'>";
                 }
             ?>
 
         </div>
-        <footer>
-            <div class="icons">
-                <p> <i class="fa-solid fa-envelope"></i> CONTACT US </p>
-                <p> <i class="fa-brands fa-github"></i> CONTRIBUTE </p>
-                <p> <i class="fa-regular fa-circle-info"></i> ABOUT US </p>
-            </div>
-            <div class="credits">
-                <p> <i class="fa-regular fa-copyright"></i> 2024 Miagao Service Finder. All rights reserved. </p>
-            </div>
-        </footer>
+        <?php include 'footer.php'; ?>
     </main>
 </body>
 

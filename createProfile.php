@@ -233,15 +233,6 @@ $conn->close();
         </form>
       </main>
     </div>
-    <footer>
-            <div class="icons">
-                <p> <i class="fa-solid fa-envelope"></i> CONTACT US </p>
-                <p> <i class="fa-brands fa-github"></i> CONTRIBUTE </p>
-                <p> <i class="fa-regular fa-circle-info"></i> ABOUT US </p>
-            </div>
-            <div class="credits">
-                <p> <i class="fa-regular fa-copyright"></i> 2024 Miagao Service Finder. All rights reserved. </p>
-            </div>
-    </footer>
+    <?php include 'footer.php'; ?>
   </body>
 </html>

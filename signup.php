@@ -50,31 +50,22 @@ $conn->close();
             <img class="side" src="images/index.png">
         </div>
         <div class="signupbox">
-        <h2>CREATE AN ACCOUNT</h2>
-        <div class="login">
-            <div class="input_login">
-                <form action="" method="post" autocomplete="off">
-                    <label for="email">Enter Email:</label><br>
-                    <input type="email" name="email" placeholder="Enter email" required><br><br>
-                    <label for="email">Enter Password:</label><br>
-                    <input type="password" name="password" placeholder="Enter password" required><br><br>
-                    <label for="email">Confirm Password:</label><br>
-                    <input type="password" name="cpassword" placeholder="Confirm password" required><br><br><br>
-                    <button type="submit" name="submit">CREATE ACCOUNT</button>
-                </form>
+            <h2>CREATE AN ACCOUNT</h2>
+            <div class="login">
+                <div class="input_login">
+                    <form action="" method="post" autocomplete="off">
+                        <label for="email">Enter Email:</label><br>
+                        <input type="email" name="email" placeholder="Enter email" required><br><br>
+                        <label for="email">Enter Password:</label><br>
+                        <input type="password" name="password" placeholder="Enter password" required><br><br>
+                        <label for="email">Confirm Password:</label><br>
+                        <input type="password" name="cpassword" placeholder="Confirm password" required><br><br><br>
+                        <button type="submit" name="submit">CREATE ACCOUNT</button>
+                    </form>
+                </div>
             </div>
         </div>
-        </div>
-        <footer>
-            <div class="icons">
-                <p> <i class="fa-solid fa-envelope"></i> CONTACT US </p>
-                <p> <i class="fa-brands fa-github"></i> CONTRIBUTE </p>
-                <p> <i class="fa-regular fa-circle-info"></i> ABOUT US </p>
-            </div>
-            <div class="credits">
-                <p> <i class="fa-regular fa-copyright"></i> 2024 Miagao Service Finder. All rights reserved. </p>
-            </div>
-        </footer>
+        <?php include 'footer.php'; ?>
     </main>
     <script src="index.js"></script>
 </body>

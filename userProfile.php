@@ -150,19 +150,7 @@ if ($conn->query("SELECT * FROM Showcase WHERE Profile_ID='$prof_id' AND Count =
             ?>
 
         </div>
-        <footer>
-            <div class="footerWrapper">
-                <div class="icons">
-                    <p> <i class="fa-solid fa-envelope"></i> CONTACT US </p>
-                    <p> <i class="fa-brands fa-github"></i> CONTRIBUTE </p>
-                    <p> <i class="fa-regular fa-circle-info"></i> ABOUT US </p>
-                </div>
-                <div class="credits">
-                    <p> <i class="fa-regular fa-copyright"></i> 2024 Miagao Service Finder. All rights reserved. </p>
-                </div>
-            </div>
-            
-        </footer>
+        <?php include 'footer.php'; ?>
     </main>
 </body>
 
