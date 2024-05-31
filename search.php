@@ -38,10 +38,41 @@ session_start();
                     <?php
                         include "conn.php";
                         if(isset($_POST["submit"])) {
+                            $query;
                             $barangay = $_POST["barangay"];
                             $category = $_POST["category"];
                             $keyword = $_POST["keyword"];
-                            $result = $conn->query("SELECT * FROM Profiles WHERE Category='$category' OR Barangay='$barangay' OR Description LIKE '%$keyword%' OR Bsns_Name LIKE '%$keyword%'");
+
+                            if ((!($barangay == "NONE")) && (!($category == "NONE")) && (!($keyword == ""))) {
+                                $query = "SELECT * FROM Profiles WHERE Barangay='$barangay' OR Category='$category' OR Bsns_Name LIKE '%$category%' 
+                                OR Description LIKE '%$category%' OR Description LIKE '%$keyword%' OR Bsns_Name LIKE '%$keyword%'";
+                            } 
+                            else if (($barangay == "NONE") && (!($category == "NONE")) && (!($keyword == ""))) {
+                                $query = "SELECT * FROM Profiles WHERE Category='$category' OR Bsns_Name LIKE '%$category%' 
+                                OR Description LIKE '%$category%' OR Description LIKE '%$keyword%' OR Bsns_Name LIKE '%$keyword%'";
+                            } 
+                            else if ((!($barangay == "NONE")) && ($category == "NONE") && (!($keyword == ""))) {
+                                $query = "SELECT * FROM Profiles WHERE Barangay='$barangay' OR 
+                                Description LIKE '%$keyword%' OR Bsns_Name LIKE '%$keyword%'";
+                            } 
+                            else if ((!($barangay == "NONE")) && (!($category == "NONE")) && ($keyword == "")) {
+                                $query = "SELECT * FROM Profiles WHERE Barangay='$barangay' OR Category='$category' OR Bsns_Name LIKE '%$category%' 
+                                OR Description LIKE '%$category%'";
+                            } 
+                            else if (($barangay == "NONE") && ($category == "NONE") && (!($keyword == ""))) {
+                                $query = "SELECT * FROM Profiles WHERE Description LIKE '%$keyword%' OR Bsns_Name LIKE '%$keyword%'";
+                            } 
+                            else if (($barangay == "NONE") && (!($category == "NONE")) && ($keyword == "")) {
+                                $query = "SELECT * FROM Profiles WHERE Category='$category' OR Bsns_Name LIKE '%$category%' OR Description LIKE '%$category%'";
+                            } 
+                            else if ((!($barangay == "NONE")) && ($category == "NONE") && ($keyword == "")) {
+                                $query = "SELECT * FROM Profiles WHERE Barangay='$barangay'";
+                            }
+                            else {
+                                $query = "SELECT * FROM Profiles";
+                            }
+
+                            $result = $conn->query($query);
                             if ($result->num_rows > 0) {
                                 while ($row = $result->fetch_assoc()) {
                                     echo "
