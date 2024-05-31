@@ -1,0 +1,54 @@
+:root {
+    --primary: white;
+    --secondary: #2c7373;
+    --accent: #012e40;
+    --font-family: Arial, sans-serif; /*change*/
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.busLogo {
+  width: 120px;
+  border-radius: 50%;
+}
+.detailsWrapper {
+  display: flex;
+  background-color: var(--secondary);
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  gap:1%;
+  padding: 20px;
+  border: 15px solid white;
+  color: white;
+}
+
+.infoWrapper {
+  display: flex;
+  width: 150vh;
+  gap: 5%;
+  text-align: start;
+
+}
+
+h5{
+    margin: 0;
+    font-size: large;
+}
+.busName {
+  margin: 0;
+  text-align: start;
+}
+
+.info{
+    width: 50vh;
+}
+.editWrap{
+    display: flex;
+    justify-content: end;
+    padding-right: 20px;
+}
