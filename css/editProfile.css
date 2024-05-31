@@ -1,0 +1,165 @@
+:root {
+  --primary: white;
+  --secondary: #2c7373;
+  --accent: #012e40;
+  --font-family: Arial, sans-serif; /*change*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: var(--accent);
+  width: 100%;
+  height: 100vh;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 3%;
+  height: 90%;
+  margin-top: 2%;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+.about {
+  text-align: start;
+}
+.aboutServiceWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2%;
+  row-gap: 15%;
+}
+
+.aboutServiceWrapper input,
+.aboutServiceWrapper select {
+  border: #012e40;
+  border-style: solid;
+  border-radius: 50px;
+  height: 30px;
+}
+.description {
+  grid-row: span 2;
+  border: #012e40;
+  border-style: solid;
+  text-align: justify;
+}
+
+.upload {
+  display: flex;
+}
+
+.upload input[value="Upload"] {
+  background-color: var(--secondary);
+  color: white;
+  height: 20px;
+  width: 80px;
+  border-radius: 50px;
+  border-style: none;
+}
+
+.upload input[value="Upload"]:hover {
+  background-color: var(--accent);
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.otherInfo {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  margin: 0%;
+}
+.address,
+.login,
+.contact {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 8px;
+  width: 35%;
+}
+
+.address input,
+.address select,
+.contact input,
+.login input {
+  border: #012e40;
+  border-style: solid;
+  border-radius: 50px;
+  height: 30px;
+}
+
+.submit {
+  width: 100px;
+  margin: auto;
+  height: 30px;
+  background-color: var(--secondary);
+  border-radius: 15px;
+  border-style: none;
+  color: white;
+}
+
+.submit:hover {
+  background-color: var(--accent);
+}
+
+.back {
+  width: 100px;
+  height: 30px;
+  background-color: var(--secondary);
+  border-radius: 15px;
+  border-style: none;
+  color: white;
+  align-self: flex-end;
+}
+
+.back:hover {
+  background-color: var(--accent);
+}
+
+footer {
+  background-color: var(--accent);
+  color: var(--primary);
+  gap: 5%;
+  height: 10%;
+  width: 100%;
+  font-size: small;
+  display: flex;
+  justify-content: center;
+}
+
+.contactWrapper,
+.aboutWrapper,
+.creditsWrapper {
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+footer a {
+  color: white;
+}
+
+footer img {
+  width: 30px;
+  height: 30px;
+}
